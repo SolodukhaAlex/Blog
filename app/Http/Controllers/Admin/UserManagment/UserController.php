@@ -27,7 +27,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user_managment.users.create', [
+            'user' => []
+        ]);
     }
 
     /**
