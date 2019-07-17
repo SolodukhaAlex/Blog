@@ -178,6 +178,7 @@ return [
 
         //Our
         Unisharp\Ckeditor\ServiceProvider::class,
+        App\Providers\BlogServiceProvider::class,
 
     ],
 
