@@ -11,7 +11,7 @@
             </ul>
         @else
         <li >
-            <a href="{{url("/blog/category/$category->slug")}}" class="dropdown-item">{{$category->title}}</a>
+            <a href="{{url("/blog/category/$category->slug")}}" class="nav-link dropdown-item">{{$category->title}}</a>
         @endif
         </li>
 @endforeach

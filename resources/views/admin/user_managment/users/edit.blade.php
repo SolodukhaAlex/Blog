@@ -5,21 +5,22 @@
     <div class="container">
 
         @component('admin.components.breadcrumb')
-            @slot('title') Создание пользователя @endslot
+            @slot('title') Редактирование пользователя @endslot
             @slot('parent') Главная @endslot
             @slot('active') Пользователи @endslot
         @endcomponent
 
         <hr />
 
-        <form class="form-horizontal" action="{{route('admin.user_managment.user.store')}}" method="post">
+        <form class="form-horizontal" action="{{route('admin.user_managment.user.update', $user)}}" method="post">
+            {{method_field('PUT')}}
             {{ csrf_field() }}
 
             {{-- Form include --}}
             @include('admin.user_managment.users.partials.form')
 
+
         </form>
     </div>
 
 @endsection
-
